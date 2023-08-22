@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iale-fer <iale-fer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 16:37:23 by ivanalefern       #+#    #+#             */
-/*   Updated: 2023/01/12 19:15:23 by iale-fer         ###   ########.fr       */
+/*   Created: 2023/01/26 17:46:49 by eleon-go          #+#    #+#             */
+/*   Updated: 2023/08/22 15:22:14 by iale-fer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0')
+	char	*pts;
+
+	pts = (char *)(s);
+	while (*pts)
 	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
+		if (*pts == (char)c)
+			return (pts);
+		pts++;
 	}
-	if ((char)c == '\0')
-		return ((char *)s);
-	return (0);
+	if (!(char)c)
+		return (pts);
+	return (NULL);
 }

@@ -3,27 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanalefernandez <ivanalefernandez@stud    +#+  +:+       +#+        */
+/*   By: iale-fer <iale-fer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 16:34:25 by ivanalefern       #+#    #+#             */
-/*   Updated: 2023/01/23 18:26:32 by ivanalefern      ###   ########.fr       */
+/*   Created: 2022/12/10 13:24:10 by eleon-go@st       #+#    #+#             */
+/*   Updated: 2023/08/22 15:22:39 by iale-fer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* *b es el punto para llenar el bloque de memoria*/
+/*c el valor que se quiere ajustar y n el numero de bytes de ese valor*/
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char	*str;
-	size_t			i;
+	unsigned char	*ptr;
 
-	i = 0;
-	str = b;
+	ptr = (unsigned char *)b;
 	while (len > 0)
 	{
-		str[i] = c;
+		*ptr = (unsigned char)c;
+		ptr++;
 		len--;
-		i++;
 	}
-	return ((void *)str);
+	return (b);
 }

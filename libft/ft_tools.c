@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_all.c                                           :+:      :+:    :+:   */
+/*   ft_tools.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iale-fer <iale-fer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/03 03:57:57 by ivanalefern       #+#    #+#             */
-/*   Updated: 2023/08/03 16:13:57 by iale-fer         ###   ########.fr       */
+/*   Created: 2023/05/04 21:01:18 by eleon-go@st       #+#    #+#             */
+/*   Updated: 2023/08/22 15:21:00 by iale-fer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,25 +18,20 @@ int	ft_putchar(int c)
 	return (1);
 }
 
-int	ft_putnbr(int num)
+int	ft_putnbr(long num)
 {
-	int	x;
+	int		x;
 
 	x = 0;
-	if (num == -2147483648)
+	if (num < 0)
 	{
-		write (1, "-2147483648", 11);
-		return (11);
+		x += ft_putchar('-');
+		x += ft_putnbr(-num);
 	}
 	else if (num > 9)
 	{
 		x += ft_putnbr(num / 10);
 		x += ft_putnbr(num % 10);
-	}
-	else if (num < 0)
-	{
-		x += ft_putchar('-');
-		x += ft_putnbr(-num);
 	}
 	else
 		x += ft_putchar(num + '0');

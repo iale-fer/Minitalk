@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanalefernandez <ivanalefernandez@stud    +#+  +:+       +#+        */
+/*   By: iale-fer <iale-fer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 15:43:42 by ivanalefern       #+#    #+#             */
-/*   Updated: 2023/01/23 16:51:40 by ivanalefern      ###   ########.fr       */
+/*   Created: 2023/01/26 19:11:37 by eleon-go          #+#    #+#             */
+/*   Updated: 2023/08/22 15:19:42 by iale-fer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanalefernandez <ivanalefernandez@stud    +#+  +:+       +#+        */
+/*   By: iale-fer <iale-fer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/23 17:31:34 by ivanalefern       #+#    #+#             */
-/*   Updated: 2023/01/23 17:31:47 by ivanalefern      ###   ########.fr       */
+/*   Created: 2023/01/23 19:22:13 by eleon-go          #+#    #+#             */
+/*   Updated: 2023/08/22 15:22:43 by iale-fer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -5,16 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iale-fer <iale-fer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/23 19:52:03 by ivanalefern       #+#    #+#             */
-/*   Updated: 2023/01/23 20:33:45 by iale-fer         ###   ########.fr       */
+/*   Created: 2022/12/09 21:35:04 by eleon-go@st       #+#    #+#             */
+/*   Updated: 2023/08/22 15:20:54 by iale-fer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*#include <stdio.h>*/
 #include "libft.h"
 
-int	ft_toupper(int a)
+int	ft_toupper(int c)
 {
-	if (a >= 'a' && a <= 'z')
-		return (a - 32);
-	return (a);
+	if (c > 96 && c < 123)
+		return (c -32);
+	return (c);
 }
+
+/*
+int main(void)
+{
+	int c;
+	c = 'b';
+	printf ("Me sale %c\n", ft_toupper(c));
+	return (0);
+}
+*/

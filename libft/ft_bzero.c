@@ -5,21 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iale-fer <iale-fer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 15:43:48 by ivanalefern       #+#    #+#             */
-/*   Updated: 2023/01/12 19:14:51 by iale-fer         ###   ########.fr       */
+/*   Created: 2022/12/09 23:13:35 by eleon-go@st       #+#    #+#             */
+/*   Updated: 2023/08/22 15:19:53 by iale-fer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *b, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	size_t	counter;
+	size_t			i;
+	unsigned char	*point;
 
-	counter = 0;
-	while (n != 0 && counter++ <= (n -1))
+	point = (unsigned char *)(s);
+	i = 0;
+	while (i < n)
 	{
-	*(char *)b = '\0';
-	b++;
+		point[i] = 0;
+		i++;
 	}
 }

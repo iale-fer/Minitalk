@@ -3,30 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanalefernandez <ivanalefernandez@stud    +#+  +:+       +#+        */
+/*   By: iale-fer <iale-fer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 16:33:44 by ivanalefern       #+#    #+#             */
-/*   Updated: 2023/01/23 19:13:18 by ivanalefern      ###   ########.fr       */
+/*   Created: 2022/12/11 19:44:19 by eleon-go          #+#    #+#             */
+/*   Updated: 2023/08/22 15:22:50 by iale-fer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *str1, const void *str2, size_t n)
+/* se utiliza para copiar una cantidad especificada de bytes de una ubicación 
+de memoria a otra*/
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char	*temp1;
-	char	*temp2;
-	size_t	i;
+	unsigned char	*pdest;
+	unsigned char	*psrc;
+	size_t			i;
 
+	if (!dest && !src)
+		return (NULL);
+	pdest = (unsigned char *)dest;
+	psrc = (unsigned char *)src;
 	i = 0;
-	temp1 = (char *) str1;
-	temp2 = (char *) str2;
-	if (!str1 && !str2)
-		return (0);
-	while (i < n)
+	while (n--)
 	{
-		temp1[i] = temp2[i];
+		pdest[i] = psrc[i];
 		i++;
 	}
-	return (str1);
+	return ((void *)dest);
 }

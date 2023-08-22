@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calloc.c                                           :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iale-fer <iale-fer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 15:43:33 by ivanalefern       #+#    #+#             */
-/*   Updated: 2023/01/12 19:14:48 by iale-fer         ###   ########.fr       */
+/*   Created: 2023/01/26 19:15:41 by eleon-go          #+#    #+#             */
+/*   Updated: 2023/08/22 15:20:04 by iale-fer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void	*ptr;
+	void	*dest;
 
-	ptr = malloc(nmemb * size);
-	if (!ptr)
+	dest = malloc(nmemb * size);
+	if (!dest)
 		return (NULL);
-	ft_bzero(ptr, nmemb * size);
-	return (ptr);
+	ft_bzero(dest, nmemb * size);
+	return (dest);
 }

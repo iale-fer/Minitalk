@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iale-fer <iale-fer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 18:57:42 by ivanalefern       #+#    #+#             */
-/*   Updated: 2023/01/12 19:15:03 by iale-fer         ###   ########.fr       */
+/*   Created: 2023/01/28 13:09:06 by eleon-go          #+#    #+#             */
+/*   Updated: 2023/08/22 15:23:22 by iale-fer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
+	if (!lst || !del)
+		return ;
 	del(lst->content);
 	free(lst);
 }

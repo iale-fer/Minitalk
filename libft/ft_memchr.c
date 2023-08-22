@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iale-fer <iale-fer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 16:32:51 by ivanalefern       #+#    #+#             */
-/*   Updated: 2023/01/12 19:15:10 by iale-fer         ###   ########.fr       */
+/*   Created: 2023/01/26 18:46:41 by eleon-go          #+#    #+#             */
+/*   Updated: 2023/08/22 15:22:57 by iale-fer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,17 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int				i;
-	unsigned char	*str;
+	unsigned char	*pts;
+	size_t			i;
+	unsigned char	c_char;
 
-	str = (unsigned char *)s;
+	c_char = (unsigned char)c;
+	pts = (unsigned char *)s;
 	i = 0;
-	while ((unsigned long)i < n)
+	while (n--)
 	{
-		if ((unsigned char)c == str[i])
-			return (&str[i]);
+		if (pts[i] == c_char)
+			return ((void *)s + i);
 		i++;
 	}
 	return (NULL);

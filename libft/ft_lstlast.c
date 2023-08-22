@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iale-fer <iale-fer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 18:56:02 by ivanalefern       #+#    #+#             */
-/*   Updated: 2023/01/12 19:15:06 by iale-fer         ###   ########.fr       */
+/*   Created: 2023/01/28 13:05:01 by eleon-go          #+#    #+#             */
+/*   Updated: 2023/08/22 15:23:14 by iale-fer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*aux;
-
-	aux = lst;
-	while (aux)
+	if (!lst)
+		return (NULL);
+	while (lst->next)
 	{
-		if (aux->next == NULL)
-			return (aux);
-		aux = aux->next;
+		lst = lst->next;
 	}
-	return (aux);
+	return (lst);
 }

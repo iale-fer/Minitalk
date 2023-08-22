@@ -5,12 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iale-fer <iale-fer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/03 16:46:36 by iale-fer          #+#    #+#             */
-/*   Updated: 2023/08/17 12:42:58 by iale-fer         ###   ########.fr       */
+/*   Created: 2023/08/22 15:19:24 by iale-fer          #+#    #+#             */
+/*   Updated: 2023/08/22 15:19:27 by iale-fer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft/libft.h"
+#include "minitalk.h"
 
 static void	ft_send_bit(int pid, char *str)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanalefernandez <ivanalefernandez@stud    +#+  +:+       +#+        */
+/*   By: iale-fer <iale-fer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 15:43:59 by ivanalefern       #+#    #+#             */
-/*   Updated: 2023/01/23 16:53:04 by ivanalefern      ###   ########.fr       */
+/*   Created: 2022/12/09 19:30:37 by eleon-go@st       #+#    #+#             */
+/*   Updated: 2023/08/22 15:23:53 by iale-fer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isalpha(int c)
 {
-	return (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'));
+	return ((c > 64 && c < 91) || (c > 96 && c < 123));
 }

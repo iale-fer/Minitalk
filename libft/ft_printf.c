@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iale-fer <iale-fer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/13 18:26:04 by ivanalefern       #+#    #+#             */
-/*   Updated: 2023/08/03 16:15:14 by iale-fer         ###   ########.fr       */
+/*   Created: 2023/05/04 21:00:27 by eleon-go@st       #+#    #+#             */
+/*   Updated: 2023/08/22 15:22:36 by iale-fer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_percent(const char *str, int i, va_list *ap)
+static int	ft_printconfig(const char *str, int i, va_list *ap)
 {
 	int	x;
 
@@ -32,8 +32,8 @@ static int	ft_percent(const char *str, int i, va_list *ap)
 	else if (str[i] == 'p')
 	{
 		x += ft_putstr("0x");
-		x += ft_pointer(va_arg(*ap, unsigned int long));
-	}	
+		x += ft_saver(va_arg(*ap, unsigned int long));
+	}
 	return (x);
 }
 
@@ -51,7 +51,7 @@ int	ft_printf(const char *str, ...)
 		if (str[i] == '%')
 		{
 			i++;
-			x += ft_percent(str, i, &args);
+			x += ft_printconfig(str, i, &args);
 		}
 		else
 			x += ft_putchar(str[i]);

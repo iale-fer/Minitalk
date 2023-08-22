@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iale-fer <iale-fer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 16:42:14 by ivanalefern       #+#    #+#             */
-/*   Updated: 2023/01/12 19:15:38 by iale-fer         ###   ########.fr       */
+/*   Created: 2023/01/28 12:20:53 by eleon-go          #+#    #+#             */
+/*   Updated: 2023/08/22 15:21:13 by iale-fer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,16 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	len_s1;
+	char	*dest;
+	size_t	len_s;
 
 	if (!s1 || !set)
 		return (NULL);
-	while (*s1 != '\0' && ft_strchr(set, *s1))
+	while (*s1 && ft_strchr(set, *s1))
 		s1++;
-	len_s1 = ft_strlen((char *)s1);
-	while (ft_strchr(set, s1[len_s1]) && len_s1 != 0)
-		len_s1--;
-	return (ft_substr((char *)s1, 0, len_s1 + 1));
+	len_s = ft_strlen((const char *)s1);
+	while (ft_strchr(set, *(s1 + len_s - 1)) && len_s > 0)
+		len_s--;
+	dest = ft_substr(s1, 0, len_s);
+	return (dest);
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iale-fer <iale-fer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 16:38:18 by ivanalefern       #+#    #+#             */
-/*   Updated: 2023/01/23 20:42:12 by iale-fer         ###   ########.fr       */
+/*   Created: 2023/01/27 20:48:28 by eleon-go          #+#    #+#             */
+/*   Updated: 2023/08/22 15:22:00 by iale-fer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,19 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*s;
-	int		i;
-	int		j;
+	char	*ret;
+	size_t	i;
+	size_t	x;
 
-	i = 0;
-	j = 0;
-	s = malloc(sizeof(char) + (ft_strlen(s1) + ft_strlen(s2)));
-	if (!s)
+	ret = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
+	if (!ret)
 		return (NULL);
-	while (s1[i] != '\0')
-	{
-		s[i] = s1[i];
-		i++;
-	}
-	while (s2[j] != '\0')
-	{
-		s[i + j] = s2[j];
-		j++;
-	}
-	s[i + j] = '\0';
-	return (s);
+	i = 0;
+	x = 0;
+	while (x < ft_strlen(s1))
+		ret[i++] = s1[x++];
+	x = 0;
+	while (x < ft_strlen(s2))
+		ret[i++] = s2[x++];
+	return (ret);
 }

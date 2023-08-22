@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iale-fer <iale-fer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 18:56:57 by ivanalefern       #+#    #+#             */
-/*   Updated: 2023/01/12 19:14:59 by iale-fer         ###   ########.fr       */
+/*   Created: 2023/01/28 13:06:33 by eleon-go          #+#    #+#             */
+/*   Updated: 2023/08/22 15:23:35 by iale-fer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,17 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*aux;
+	t_list	*tmp;
 
-	if (!*lst)
+	if (!lst || !new)
+		return ;
+	if (*lst == NULL)
 	{
 		*lst = new;
 		return ;
 	}
-	aux = ft_lstlast(*lst);
-	aux->next = new;
+	tmp = *lst;
+	while (tmp->next)
+		tmp = tmp->next;
+	tmp->next = new;
 }

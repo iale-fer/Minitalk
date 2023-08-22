@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iale-fer <iale-fer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 18:55:18 by ivanalefern       #+#    #+#             */
-/*   Updated: 2023/01/12 19:15:09 by iale-fer         ###   ########.fr       */
+/*   Created: 2023/01/28 12:56:40 by eleon-go          #+#    #+#             */
+/*   Updated: 2023/08/22 15:23:03 by iale-fer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int		size;
-	t_list	*aux;
+	int	i;
 
-	size = 0;
-	aux = lst;
-	while (aux != NULL)
+	i = 0;
+	if (!lst)
+		return (0);
+	while (lst)
 	{
-		size++;
-		aux = aux->next;
+		lst = lst->next;
+		i++;
 	}
-	return (size);
+	return (i);
 }

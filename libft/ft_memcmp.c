@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iale-fer <iale-fer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 16:33:25 by ivanalefern       #+#    #+#             */
-/*   Updated: 2023/01/12 19:15:11 by iale-fer         ###   ########.fr       */
+/*   Created: 2023/01/26 18:57:20 by eleon-go          #+#    #+#             */
+/*   Updated: 2023/08/22 15:22:54 by iale-fer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,18 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
+	unsigned char	*pts1;
+	unsigned char	*pts2;
+	size_t			i;
 
 	i = 0;
-	while (i < n)
+	pts1 = (unsigned char *)s1;
+	pts2 = (unsigned char *)s2;
+	while (n--)
 	{
-		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
+		if (pts1[i] != pts2[i])
 		{
-			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+			return (pts1[i] - pts2[i]);
 		}
 		i++;
 	}
